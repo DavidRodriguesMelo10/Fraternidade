@@ -1,15 +1,13 @@
 html,
 body {
   height: 100%;
-  margin-left: -19%;
-  background-color: #e6f0ff !important;
 }
 
 .form-signin {
   width: 100%;
   max-width: 330px;
   padding: 15px;
-  margin: 36% 0 0 40%;
+  margin: 43% 0 0 30%;
 }
 .form-signin .checkbox {
   font-weight: 400;
@@ -35,25 +33,24 @@ body {
   border-top-right-radius: 0;
 }
 
+.row{
+  margin: 0 !important;
+}
+
+
 /* PARTE DO LOGO */
 
 .logo {
   border-bottom-left-radius: 60px;
   border-top-right-radius: 60px;
-  max-width: 65%;
-  margin: 33% 27%;
+  width: 52%;
+  margin: 40% 24%;
 }
 
 .fundologo {
   background-color: #4d94ff;
-  padding-bottom: 31.5%;
   box-shadow: 8px 0 #c9d3e2;
-  margin-left: -0.6%;
-}
-
-.linha {
-  height: 100%;
-  background-color: black;
+  width: 40%;
 }
 
 .linhalogo {
@@ -61,3 +58,14 @@ body {
 }
 
 /* PARTE DO LOGIN*/
+.fundologin{
+  background-color: #e6f0ff !important; 
+  width: 59.3%;
+  margin-left: 0.6%;
+}
+
+.tudo{
+  height: 100%;
+}
+
+
