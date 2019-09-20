@@ -1,0 +1,71 @@
+html,
+body {
+  height: 100%;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 43% 0 0 30%;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type='email'] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type='password'] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.row{
+  margin: 0 !important;
+}
+
+
+/* PARTE DO LOGO */
+
+.logo {
+  border-bottom-left-radius: 60px;
+  border-top-right-radius: 60px;
+  width: 52%;
+  margin: 40% 24%;
+}
+
+.fundologo {
+  background-color: #4d94ff;
+  box-shadow: 8px 0 #c9d3e2;
+  width: 40%;
+}
+
+.linhalogo {
+  margin: 0 9% 0 9%;
+}
+
+/* PARTE DO LOGIN*/
+.fundologin{
+  background-color: #e6f0ff !important; 
+  width: 59.3%;
+  margin-left: 0.6%;
+}
+
+.tudo{
+  height: 100%;
+}
+
+
