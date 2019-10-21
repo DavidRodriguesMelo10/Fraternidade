@@ -1,8 +1,11 @@
-# FRATERNIDADE
+# xtreme-react-lite
 
-estamos desenvolvendo um site/ web app para uma fraternidade ter um controle maior sobre suas familias cadastradas e cadastrar mais se necessario, nesse projeto teremos uma pagina de login, uma dash onde mostra-ra alguns dados baiscos de todas as familias que estao cadastradas com a posibilidade de filtrar a familia especifica, teremos tambem uma pagina para cadastro de novas familias e uma pagina do perfil da familia mostrando todos os dados incluindo os dados dos dependentes
+<a href="https://wrappixel.com">
+<img src="https://wrappixel.com/wp-content/uploads/2017/03/wp-updated-logo.jpg" /></a>
+<br/>
 
-Esse projeto está sendo desenvolvido pelo
-David Rodrigues
-Felipe Bassetto
-Guilherme Farias
+<h3>React Version of Xtreme admin, you can use it for your personal project, Footer backlink required, it must be redirect to our wrappixel.com</h3>
+
+Check the live preview : 
+
+<a href="https://wrappixel.com/demos/free-admin-templates/xtreme-reactadmin-lite/landingpage/">Demo </a>
