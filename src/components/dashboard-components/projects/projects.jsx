@@ -5,15 +5,7 @@ import img2 from 'assets/images/users/2.jpg';
 import img3 from 'assets/images/users/3.jpg';
 import img4 from 'assets/images/users/4.jpg';
 
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Input,
-  Table,
-  Tooltip
-} from 'reactstrap';
+import { Card, CardBody, CardTitle, Input, Table, Tooltip } from 'reactstrap';
 
 class Projects extends React.Component {
   constructor(props) {
