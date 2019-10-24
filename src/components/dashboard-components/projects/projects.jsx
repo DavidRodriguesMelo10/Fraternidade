@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { PaginationLink } from 'reactstrap';
+
 import img1 from 'assets/images/users/1.jpg';
 import img2 from 'assets/images/users/2.jpg';
 import img3 from 'assets/images/users/3.jpg';
@@ -84,12 +86,14 @@ class Projects extends React.Component {
                 <td>
                   <div className="d-flex no-block align-items-center">
                     <div className="mr-2">
-                      <img
-                        src={img1}
-                        alt="user"
-                        className="rounded-circle"
-                        width="45"
-                      />
+                      <PaginationLink href="">
+                        <img
+                          src={img1}
+                          alt="user"
+                          className="rounded-circle"
+                          width="45"
+                        />
+                      </PaginationLink>
                     </div>
                     <div className="">
                       <h5 className="mb-0 font-16 font-medium">Hanna Gover</h5>

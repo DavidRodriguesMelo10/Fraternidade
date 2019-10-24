@@ -20,12 +20,12 @@ import logodarkicon from '../../assets/images/logo-icon.png';
 import logolighticon from '../../assets/images/logo-light-icon.png';
 import logodarktext from '../../assets/images/logo-text.png';
 import logolighttext from '../../assets/images/logo-light-text.png';
+import logo from '../../assets/images/logo.jpg';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
-    this.showMobilemenu = this.showMobilemenu.bind(this);
     this.state = {
       isOpen: false
     };
@@ -37,12 +37,6 @@ class Header extends React.Component {
     this.setState({
       isOpen: !this.state.isOpen
     });
-  }
-  /*--------------------------------------------------------------------------------*/
-  /*To open SIDEBAR-MENU in MOBILE VIEW                                             */
-  /*--------------------------------------------------------------------------------*/
-  showMobilemenu() {
-    document.getElementById('main-wrapper').classList.toggle('show-sidebar');
   }
 
   render() {
