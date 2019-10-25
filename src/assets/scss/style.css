@@ -8460,6 +8460,9 @@ Preloader
     .feed-widget .feed-body .feed-item > .feed-icon i {
       line-height: 40px; }
 
+.logo{
+  max-width: 90px;;
+}
 #main-wrapper[data-layout='vertical'], #main-wrapper[data-layout='horizontal'] {
   /*This is for the logo bg*/
   /*This is for the sidebar bg*/ }

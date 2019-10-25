@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PaginationLink } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 import img1 from 'assets/images/users/1.jpg';
 import img2 from 'assets/images/users/2.jpg';
@@ -86,14 +86,14 @@ class Projects extends React.Component {
                 <td>
                   <div className="d-flex no-block align-items-center">
                     <div className="mr-2">
-                      <PaginationLink href="">
+                      <Link to="/perfil">
                         <img
                           src={img1}
                           alt="user"
                           className="rounded-circle"
                           width="45"
                         />
-                      </PaginationLink>
+                      </Link>
                     </div>
                     <div className="">
                       <h5 className="mb-0 font-16 font-medium">Hanna Gover</h5>
@@ -101,7 +101,7 @@ class Projects extends React.Component {
                     </div>
                   </div>
                 </td>
-                <td>Elite Admin</td>
+                <td>xxx.xxx.xxx-xx</td>
 
                 <td>
                   <i className="fa fa-circle text-orange" id="tlp1"></i>
@@ -111,24 +111,26 @@ class Projects extends React.Component {
                     target="tlp1"
                     toggle={this.toggle10}
                   >
-                    In Progress
+                    Inativo
                   </Tooltip>
                 </td>
-                <td>35</td>
+                <td>xxxxx-xxxx</td>
                 <td className="blue-grey-text  text-darken-4 font-medium">
-                  $96K
+                  Av Rudge 1112
                 </td>
               </tr>
               <tr>
                 <td>
                   <div className="d-flex no-block align-items-center">
                     <div className="mr-2">
-                      <img
-                        src={img2}
-                        alt="user"
-                        className="rounded-circle"
-                        width="45"
-                      />
+                      <Link to="">
+                        <img
+                          src={img2}
+                          alt="user"
+                          className="rounded-circle"
+                          width="45"
+                        />
+                      </Link>
                     </div>
                     <div className="">
                       <h5 className="mb-0 font-16 font-medium">
@@ -138,7 +140,7 @@ class Projects extends React.Component {
                     </div>
                   </div>
                 </td>
-                <td>Elite Admin</td>
+                <td>xxx.xxx.xxx-xx</td>
 
                 <td>
                   <i className="fa fa-circle text-success" id="tlp2"></i>
@@ -151,21 +153,23 @@ class Projects extends React.Component {
                     Success
                   </Tooltip>
                 </td>
-                <td>35</td>
+                <td>xxxxx-xxxx</td>
                 <td className="blue-grey-text  text-darken-4 font-medium">
-                  $96K
+                  Av Rudge 1113
                 </td>
               </tr>
               <tr>
                 <td>
                   <div className="d-flex no-block align-items-center">
                     <div className="mr-2">
-                      <img
-                        src={img3}
-                        alt="user"
-                        className="rounded-circle"
-                        width="45"
-                      />
+                      <Link to="">
+                        <img
+                          src={img3}
+                          alt="user"
+                          className="rounded-circle"
+                          width="45"
+                        />
+                      </Link>
                     </div>
                     <div className="">
                       <h5 className="mb-0 font-16 font-medium">
@@ -175,7 +179,7 @@ class Projects extends React.Component {
                     </div>
                   </div>
                 </td>
-                <td>Elite Admin</td>
+                <td>xxx.xxx.xxx-xx</td>
 
                 <td>
                   <i className="fa fa-circle text-success" id="tlp3"></i>
@@ -188,21 +192,23 @@ class Projects extends React.Component {
                     Success
                   </Tooltip>
                 </td>
-                <td>35</td>
+                <td>xxxxx-xxxx</td>
                 <td className="blue-grey-text  text-darken-4 font-medium">
-                  $96K
+                  Av Rudge 1114
                 </td>
               </tr>
               <tr>
                 <td>
                   <div className="d-flex no-block align-items-center">
                     <div className="mr-2">
-                      <img
-                        src={img4}
-                        alt="user"
-                        className="rounded-circle"
-                        width="45"
-                      />
+                      <Link to="">
+                        <img
+                          src={img4}
+                          alt="user"
+                          className="rounded-circle"
+                          width="45"
+                        />
+                      </Link>
                     </div>
                     <div className="">
                       <h5 className="mb-0 font-16 font-medium">Jan Petrovic</h5>
@@ -210,7 +216,7 @@ class Projects extends React.Component {
                     </div>
                   </div>
                 </td>
-                <td>Elite Admin</td>
+                <td>xxx.xxx.xxx-xx</td>
 
                 <td>
                   <i className="fa fa-circle text-orange" id="tlp4"></i>
@@ -220,12 +226,12 @@ class Projects extends React.Component {
                     target="tlp4"
                     toggle={this.toggle40}
                   >
-                    In Progress
+                    Inativo
                   </Tooltip>
                 </td>
-                <td>35</td>
+                <td>xxxxx-xxxx</td>
                 <td className="blue-grey-text  text-darken-4 font-medium">
-                  $96K
+                  Av Rudge 1118
                 </td>
               </tr>
             </tbody>
