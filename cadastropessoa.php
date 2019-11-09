@@ -1,118 +1,90 @@
 <?php if(!isset($_GET['editar'])){ ?>
-
-<h1 class='titulo'>Cadastro de pessoas.</h1>
+  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="jquery.mask.min.js"></script>
+  <script>
+            $(document).ready(function(){
+                $('#data_titular').mask('00/00/0000');
+                $('#data_dependente').mask('00/00/0000');
+                $('#rg_titular').mask('00.000.000-0');
+                $('#rg_pa').mask('00.000.000-0');
+                $('#cpf_titular').mask('000.000.000-00');
+                $('#telefone').mask('(00)00000-0000');
+            });
+        </script>
+<h1 class='titulo'>Cadastro de titular.</h1>
 
 <form method="post" action="processapessoa.php">
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">foto:</label>
+    <label class="badge badge-secondary">Foto:</label>
     <input type="text" class="form-control" name="foto" placeholder="Anexar foto">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">Nome:</label>
+    <label class="badge badge-secondary">Nome:</label>
     <input type="text" class="form-control" name="nome" placeholder="Digite o seu nome">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">data_nascimento:</label>
-    <input type="text" class="form-control" name="data_nascimento" placeholder="Digite sua data de nascimento">
+    <label class="badge badge-secondary">Sexo:</label>
+    <input type="text" class="form-control" name="sexo" placeholder="Digite o seu sexo">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">estado_civil:</label>
+    <label class="badge badge-secondary">Data de Nascimento:</label>
+    <input type="text" class="form-control" name="data_nascimento" placeholder="Digite sua data de nascimento" id="data_titular">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Estado Civil:</label>
     <input type="text" class="form-control" name="estado_civil" placeholder="Digite seu estado civil">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">nome_conjuge:</label>
+    <label class="badge badge-secondary">Nome Conjuge:</label>
     <input type="text" class="form-control" name="nome_conjuge" placeholder="Digite o nome do conjuge">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">rg:</label>
-    <input type="text" class="form-control" name="rg" placeholder="Digite seu rg">
+    <label class="badge badge-secondary">Rg:</label>
+    <input type="text" class="form-control" name="rg" placeholder="Digite seu rg" id="rg_titular">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary" >cpf:</label>
-    <input type="text" class="form-control" name="cpf" id="exampleInputEmail1" placeholder="Digite o seu cpf">
+    <label class="badge badge-secondary" >Cpf:</label>
+    <input type="text" class="form-control" name="cpf" placeholder="Digite o seu cpf" id="cpf_titular">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary" >Email:</label>
+    <label class="badge badge-secondary" >Email:</label>
     <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o seu Endereco">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary" >telefone:</label>
-    <input type="text" class="form-control" name="telefone" id="exampleInputEmail1" placeholder="Digite o seu telefone">
+    <label class="badge badge-secondary" >Telefone:</label>
+    <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Digite o seu telefone">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary" >Endereco:</label>
-    <input type="text" class="form-control" name="endereco" id="exampleInputEmail1" placeholder="Digite o seu email">
+    <label class="badge badge-secondary" >Endereco:</label>
+    <input type="text" class="form-control" name="endereco" placeholder="Digite o seu Endereço">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">moradia:</label>
+    <label class="badge badge-secondary">Moradia:</label>
     <input type="text" class="form-control" name="moradia" placeholder="Digite sua moradia">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">nome_pa:</label>
+    <label class="badge badge-secondary">Nome Pessoa Altorizada:</label>
     <input type="text" class="form-control" name="nome_pa" placeholder="Pessoa autorizada">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">rg_pa:</label>
-    <input type="text" class="form-control" name="rg_pa" placeholder="Digite seu rg_pa">
+    <label class="badge badge-secondary">Rg Pessoa Altorizada:</label>
+    <input type="text" class="form-control" name="rg_pa" placeholder="Digite seu rg_pa" id="rg_pa">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">informa_add:</label>
-    <input type="text" class="form-control" name="informa_add" placeholder="Digite informaçoes adicionais">
+    <label class="badge badge-secondary">Informações adicionais:</label>
+    <input type="text" class="form-control" name="informacao_adicional" placeholder="Digite informações adicionais">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">Status:</label>
+    <label class="badge badge-secondary">Status:</label>
     <input type="text" class="form-control" name="status" placeholder="Digite o status">
   </div>
-
-
-
-
-
-
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">Numero do cadastro:</label>
-    <input type="text" class="form-control" name="grau_parentenco" placeholder="Digite o grau de parentesco">
+  <div>
+    <img src="img/user.png" alt="" width="5%" onclick="chamadependente()" style="position:relative">
+    <p style="color:#6C757D; margin: -3.6% 0 3% 6.5%" >Adicionar Dependente</p>
   </div>
 
-
-
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">grau_parentenco:</label>
-    <input type="text" class="form-control" name="grau_parentenco" placeholder="Digite o grau de parentesco">
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">nome_D:</label>
-    <input type="text" class="form-control" name="nome_D" placeholder="Digite o nome do dependende">
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">diferencias:</label>
-    <input type="text" class="form-control" name="diferencias" placeholder="diferencias">
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">data_nascimentoD:</label>
-    <input type="text" class="form-control" name="data_nascimentoD" placeholder="Digite a data de nascimento dependente">
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">rg_D:</label>
-    <input type="text" class="form-control" name="rg_D" placeholder="Rg dependente">
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">fralda:</label>
-    <input type="text" class="form-control" name="fralda" placeholder="fralda">
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">data_nascimentoBB:</label>
-    <input type="text" class="form-control" name="data_nascimentoBB" placeholder="data de nascimento do Bebe">
-  </div>
-  <br>
-  <input type="submit" class="btn btn-primary" value="Cadastrar pessoa">
-</form>
+  <input type="submit" class="btn btn-primary" value="Cadastrar Titular">
+  <br/>
 
 <?php } else {
   while($linha = mysqli_fetch_array($consulta_pessoas)){
@@ -124,15 +96,15 @@
 <form method="post" action="editapessoa.php">
   <input type="hidden" name="idpessoas" value="<?php echo $linha['idpessoas'];?>">
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">Nome:</label>
+    <label class="badge badge-secondary">Nome:</label>
     <input type="text" class="form-control" name="nome" placeholder="Digite o seu nome" value="<?php echo $linha['nome'];?> ">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">Email:</label>
+    <label class="badge badge-secondary">Email:</label>
     <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o seu email" value="<?php echo $linha['email'];?>">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="badge badge-secondary">Nome:</label>
+    <label class="badge badge-secondary">Nome:</label>
     <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['status'];?> ">
   </div>
   <br>

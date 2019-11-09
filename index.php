@@ -2,7 +2,8 @@
 
 include 'db.php';
 include 'header.php';
-include 'footer.php';
+
+
 
 if(isset($_GET['pagina'])){
     $pagina = $_GET['pagina'];
@@ -17,3 +18,5 @@ if($pagina == 'cadastropessoa'){
 else{
     include 'pessoas.php';
 }
+
+include 'footer.php';

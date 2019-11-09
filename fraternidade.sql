@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE DATABASE fraternidade;
 
 CREATE TABLE `fraternidade`.`pessoas` (
-  `idpessoas` int(11) NOT NULL AUTO_INCREMENT,
+  `idpessoas` int(11) AUTO_INCREMENT,
   `foto` varchar(255) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `data_nascimento` date NOT NULL,
@@ -53,18 +53,17 @@ CREATE TABLE 'fraternidade'.'dependente'(
   `id_dependente` int(11) NOT NULL AUTO_INCREMENT,
   `num_cadastro` varchar(255) NOT NULL,
   `nome_dependente` varchar(255) NOT NULL,
+  `data_nascimento_dependente` date NOT NULL,
   `sexo_dependente` varchar(255) NOT NULL,
   `rg_dependente` varchar(11),
   `grau_parentenco` varchar(255) NOT NULL,
-  'dependente_criança' varchar(255) NOT NULL,
   `num_crianca` varchar(255),
   `idade_C` varchar(255) NOT NULL,
   `tamanho_sapato` varchar(255),
   `tamanho_roupa` varchar(255),
-  `data_nascimento_dependente` date NOT NULL,
-  `fralda` varchar(50) NOT NULL,
   `data_nascimentoBB` date,
-  `dificiencia` varchar(255)
+  `dificiencia` varchar(255),
+  `fralda` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
