@@ -2,10 +2,10 @@
 
 include 'db.php';
 
-$foto = $_POST['foto'];
+$foto = $_FILES["foto"];
 $nome = $_POST['nome'];
-$sexo = $_POST['sexo'];
 $data_nascimento = $_POST['data_nascimento'];
+$sexo = $_POST['sexo'];
 $estado_civil = $_POST['estado_civil'];
 $nome_conjuge = $_POST['nome_conjuge'];
 $rg = $_POST['rg'];
@@ -17,30 +17,15 @@ $moradia = $_POST['moradia'];
 $nome_pa = $_POST['nome_pa'];
 $rg_pa = $_POST['rg_pa'];
 $informacao_adicional = $_POST['informacao_adicional'];
+$data_cadastro = $_POST['data_cadastro'];
 $status = $_POST['status'];
 
 
-$query = "INSERT INTO pessoas values (default, '$foto', '$nome', '$data_nascimento', '$sexo',
+
+$query = "INSERT INTO pessoas values (default, '$foto', '$nome', '$sexo', '$data_nascimento', 
  '$estado_civil', '$nome_conjuge', '$rg', '$cpf', '$email', '$telefone', '$endereco',
- '$moradia', '$nome_pa', '$rg_pa', '$informacao_adicional',
+ '$moradia', '$nome_pa', '$rg_pa', '$data_cadastro', '$informacao_adicional',
  '$status')";
-
-
-
-
-
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$status = $_POST['status'];
-
-
-
-$query = "INSERT INTO pessoas (nome, email, status) values ('$nome','$email','$status')";
-
-
-
-
-
 
 mysqli_query($conexao, $query);
 

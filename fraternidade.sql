@@ -29,66 +29,59 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE fraternidade;
 
-CREATE TABLE `fraternidade`.`pessoas` (
-  `idpessoas` int(11) AUTO_INCREMENT,
-  `foto` varchar(255) NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `data_nascimento` date NOT NULL,
-  `estado_civil` varchar(30) NOT NULL,
-  `nome_conjuge` varchar(255),
-  `rg` varchar(11) NOT NULL,
-  `cpf` varchar(11) NOT NULL,
-  `email` varchar(255),
-  `telefone` varchar(50) NOT NULL,
-  `endereco` varchar(255) NOT NULL,
-  `moradia` varchar(30) NOT NULL,
-  `nome_pa` varchar(100) NOT NULL,
-  `rg_pa` varchar(11) NOT NULL,
-  `informacao_adicional` varchar(255),
-  `data_cadastro` datetime NOT NULL,
-  `status` varchar(7) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+USE fraternidade;
 
-CREATE TABLE 'fraternidade'.'dependente'(
-  `id_dependente` int(11) NOT NULL AUTO_INCREMENT,
-  `num_cadastro` varchar(255) NOT NULL,
-  `nome_dependente` varchar(255) NOT NULL,
-  `data_nascimento_dependente` date NOT NULL,
-  `sexo_dependente` varchar(255) NOT NULL,
-  `rg_dependente` varchar(11),
-  `grau_parentenco` varchar(255) NOT NULL,
-  `num_crianca` varchar(255),
-  `idade_C` varchar(255) NOT NULL,
-  `tamanho_sapato` varchar(255),
-  `tamanho_roupa` varchar(255),
-  `data_nascimentoBB` date,
-  `dificiencia` varchar(255),
-  `fralda` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE pessoas (
+  idpessoas int(11),
+  foto BLOB,
+  nome varchar(100) NOT NULL,
+  sexo varchar(10) NOT NULL,
+  data_nascimento varchar(20) NOT NULL,
+  estado_civil varchar(30) NOT NULL,
+  nome_conjuge varchar(255) DEFAULT 'Não tem',
+  rg varchar(12) NOT NULL,
+  cpf varchar(14) NOT NULL,
+  email varchar(255) DEFAULT 'Não tem',
+  telefone varchar(50) NOT NULL,
+  endereco varchar(255) NOT NULL,
+  moradia varchar(30) NOT NULL,
+  nome_pa varchar(100) NOT NULL,
+  rg_pa varchar(12) NOT NULL,
+  informacao_adicional varchar(255) NOT NULL,
+  data_cadastro varchar(20),
+  status varchar(7) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `pessoas`
---
+CREATE TABLE dependentes(
+  id_dependente int(11),
+  num_cadastro varchar(255) NOT NULL,
+  nome_dependente varchar(255) NOT NULL,
+  data_nascimento_dependente date NOT NULL,
+  sexo_dependente varchar(255) NOT NULL,
+  rg_dependente varchar(12),
+  grau_parentenco varchar(255) NOT NULL,
+  num_crianca varchar(255),
+  idade_C varchar(255) NOT NULL,
+  tamanho_sapato varchar(255),
+  tamanho_roupa varchar(255),
+  data_nascimentoBB date,
+  dificiencia varchar(255),
+  fralda varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `pessoas`
---
-ALTER TABLE `pessoas`
-  ADD PRIMARY KEY (`idpessoas`);
+ALTER TABLE pessoas
+  ADD PRIMARY KEY (idpessoas);
 
---
--- AUTO_INCREMENT for dumped tables
---
+ALTER TABLE dependentes
+  ADD PRIMARY KEY (id_dependente);
 
---
--- AUTO_INCREMENT for table `pessoas`
---
-ALTER TABLE `pessoas`
-  MODIFY `idpessoas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+ALTER TABLE pessoas
+  MODIFY idpessoas int(11) AUTO_INCREMENT, AUTO_INCREMENT=28;
+COMMIT;
+
+ALTER TABLE dependentes
+  MODIFY id_dependente int(11) AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
