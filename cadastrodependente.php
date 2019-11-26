@@ -15,7 +15,7 @@ include 'header.php';
     </div>
     <div class="form-group">
         <label class="badge badge-secondary">Sexo:</label>
-        <input type="text" class="form-control" name="nome_D" placeholder="Digite o nome do dependende">
+        <input type="text" class="form-control" name="sexo" placeholder="Digite o seu sexo">
     </div>
     <div class="form-group">
         <label class="badge badge-secondary">Rg:</label>
@@ -27,11 +27,11 @@ include 'header.php';
     </div>
     <div class="form-group">
         <label class="badge badge-secondary">Tamanho do Sapato:</label>
-        <input type="text" class="form-control" name="data_nascimentoD" placeholder="Digite a data de nascimento dependente">
+        <input type="text" class="form-control" name="sapato" placeholder="Digite o numero de calçados">
     </div>
     <div class="form-group">
         <label class="badge badge-secondary">Tamanho da Roupa:</label>
-        <input type="text" class="form-control" name="data_nascimentoD" placeholder="Digite a data de nascimento dependente">
+        <input type="text" class="form-control" name="roupa" placeholder="Digite o tamanho da roupa">
     </div>
     <div class="form-group">
         <input type="checkbox" onclick="chamadata()" id="botaogravida" name="botaogravida">  Estou Gravida
