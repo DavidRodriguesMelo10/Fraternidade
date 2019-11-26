@@ -22,7 +22,7 @@
   </div>
   <div class="form-group">
     <label class="badge badge-secondary">Data de Nascimento:</label>
-    <input type="text" class="form-control" placeholder="Digite sua data de nascimento" id="data_nascimento">
+    <input type="text" class="form-control" name="data_nascimento" placeholder="Digite sua data de nascimento" id="data_nascimento">
   </div>
   <div class="form-group">
     <label class="badge badge-secondary">Estado Civil:</label>
@@ -113,14 +113,67 @@
     <input type="text" class="form-control" name="nome" placeholder="Digite o seu nome" value="<?php echo $linha['nome'];?> ">
   </div>
   <div class="form-group">
+    <label class="badge badge-secondary">Sexo:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['sexo'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Data de Nascimento:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['data_nascimento'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Estado Civil:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['estado_civil'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Nome do Conjuge:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['nome_conjuge'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Rg:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['rg'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Cpf:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['cpf'];?> ">
+  </div>
+  <div class="form-group">
     <label class="badge badge-secondary">Email:</label>
     <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o seu email" value="<?php echo $linha['email'];?>">
   </div>
   <div class="form-group">
-    <label class="badge badge-secondary">Nome:</label>
+    <label class="badge badge-secondary">Telefone:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['telefone'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Endereço:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['endereco'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Moradia:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['moradia'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Pessoa Autorizada:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['nome_pa'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Rg da Pessoa Autorizada:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['rg_pa'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Informações Adicionais:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['informacao_adicional'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Data do Cadastro:</label>
+    <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['data_cadastro'];?> ">
+  </div>
+  <div class="form-group">
+    <label class="badge badge-secondary">Status:</label>
     <input type="text" class="form-control" name="status" placeholder="Digite o status" value="<?php echo $linha['status'];?> ">
   </div>
   <br>
+  <?php include 'consulta_dependentes.php';?>
   <input type="submit" class="btn btn-primary" value="Editar pessoa">
 </form>
 
