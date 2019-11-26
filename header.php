@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="container">
-            <a href="index.php"><img src="img/logo.jpg" alt="logo" title="logo" style="width:6%"></a>
+            <a href="index.php"><img src="img/logo.png" alt="logo" title="logo" style="width:6%"></a>
         </div>
     </header>
     <div id="conteudo" class="container">
