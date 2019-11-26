@@ -69,19 +69,19 @@ include 'header.php';
     <div style="display:none" id="gravida">
     <div class="form-group">
         <label class="badge badge-secondary">Data de Nascimento da Bebe:</label>
-        <input type="text" class="form-control" name="data_nascimentoD" placeholder="Digite a data de nascimento dependente">
+        <input type="text" class="form-control" name="data_nascimentoD" placeholder="Digite a data de nascimento dependente" id="nasc_bb">
     </div>
     </div>
     <div style="display:none" id="deficiente">
     <div class="form-group">
         <label class="badge badge-secondary">Deficiencia:</label>
-        <input type="text" class="form-control" name="deficiencia" placeholder="deficiencia" >
+        <input type="text" class="form-control" name="deficiencia" placeholder="deficiencia" id="deficiencia" >
     </div>
     </div>
     <div style="display:none" id="fraldas">
     <div class="form-group">
         <label class="badge badge-secondary">Fralda:</label>
-        <input type="text" class="form-control" name="fralda" placeholder="fralda">
+        <input type="text" class="form-control" name="fralda" placeholder="fralda" id="fralda">
     </div>
     </div>
     <input type="submit" class="btn btn-primary" value="Cadastrar Dependente" >
