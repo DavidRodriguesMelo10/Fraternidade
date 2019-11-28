@@ -15,8 +15,17 @@ else{
 if($pagina == 'cadastropessoa'){
     include 'cadastropessoa.php';
 }
+elseif($pagina == 'cadastrodependente'){
+    include 'cadastrodependente.php';
+}
+elseif($pagina == 'editarpessoa'){
+    include 'editarpessoa.php';
+    include 'consulta_dependentes.php';
+}
 else{
     include 'pessoas.php';
 }
+
+
 
 include 'footer.php';

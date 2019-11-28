@@ -1,7 +1,4 @@
-<?php
-include 'header.php';
 
-?>
 <form method="post" action="processadependente.php">
 
     <h1 class='titulo'>Cadastro de dependentes.</h1>
@@ -101,6 +98,3 @@ include 'header.php';
         }
     </script>
 </form>
-<?php
-include 'footer.php';
-?>

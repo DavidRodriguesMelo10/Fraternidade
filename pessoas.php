@@ -3,7 +3,9 @@
 <table class="table table-hover table-striped" id="pessoas">
   <thead>
     <tr>
+      <th>Cadastro</th>
       <th>Nome</th>
+      <th>Status</th>
       <th>editar</th>
       <th>deletar</th>
     </tr>
@@ -11,10 +13,12 @@
   <tbody>
     <?php 
       while($linha = mysqli_fetch_array($consulta_pessoas)){
-        echo '<tr><td>'.$linha['nome'].'</td>';
+        echo '<tr><td>'.$linha['id'].'</td>';
+        echo '<td>'.$linha['nome'].'</td>';
+        echo '<td>'.$linha['status'].'</td>';
     ?>
-    <td><a href="?pagina=cadastropessoa&editar=<?php echo $linha['id'];?>"><i class="fas fa-user-edit"></i></a></td>
-    <td><a href="deletapessoa.php?idpessoas=<?php echo $linha['id'];?>"><i class="fas fa-user-times"style="color: #ff6b6b;"></i></a></td></tr>
+    <td><a href="?pagina=editarpessoa&editar=<?php echo $linha['id'];?>"><i class="fas fa-user-edit"></i></a></td>
+    <td><a href="deletapessoa.php?deletar=<?php echo $linha['id'];?>"><i class="fas fa-user-times"style="color: #ff6b6b;"></i></a></td></tr>
     <?php
       }
     ?>

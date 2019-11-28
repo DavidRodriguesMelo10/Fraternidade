@@ -31,5 +31,8 @@ $query = "INSERT INTO pessoas values (default, '$nome', '$sexo', '$data_nascimen
 
 mysqli_query($conexao, $query);
 
-header('location:cadastrodependente.php');
+$pegar_linha =  mysqli_query($conexao, "Select * from val_produtos order by id DESC LIMIT 0, 1");
+$id = $pegar_linha['id'];
+header('location:cadastrodependente.php?id=$id');
+
 
