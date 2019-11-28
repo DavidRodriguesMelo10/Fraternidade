@@ -2,10 +2,10 @@
 
 include 'db.php';
 
-$idpessoas = $_GET['idpessoas'];
+$idpessoas = $_GET['idpesssoas'];
 
 
-$query = "DELETE FROM pessoas WHERE idpessoas = $idpessoas";
+$query = "DELETE FROM pessoas WHERE id = $idpessoas";
 
 mysqli_query($conexao, $query);
 

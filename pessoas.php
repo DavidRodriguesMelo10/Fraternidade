@@ -4,8 +4,6 @@
   <thead>
     <tr>
       <th>Nome</th>
-      <th>Email</th>
-      <th>status</th>
       <th>editar</th>
       <th>deletar</th>
     </tr>
@@ -14,11 +12,9 @@
     <?php 
       while($linha = mysqli_fetch_array($consulta_pessoas)){
         echo '<tr><td>'.$linha['nome'].'</td>';
-        echo '<td>'.$linha['email'].'</td>';
-        echo '<td>'.$linha['status'].'</td>';
     ?>
-    <td><a href="?pagina=cadastropessoa&editar=<?php echo $linha['idpessoas'];?>"><i class="fas fa-user-edit"></i></a></td>
-    <td><a href="deletapessoa.php?idpessoas=<?php echo $linha['idpessoas'];?>"><i class="fas fa-user-times"style="color: #ff6b6b;"></i></a></td></tr>
+    <td><a href="?pagina=cadastropessoa&editar=<?php echo $linha['id'];?>"><i class="fas fa-user-edit"></i></a></td>
+    <td><a href="deletapessoa.php?idpessoas=<?php echo $linha['id'];?>"><i class="fas fa-user-times"style="color: #ff6b6b;"></i></a></td></tr>
     <?php
       }
     ?>

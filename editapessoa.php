@@ -2,44 +2,36 @@
 
 include 'db.php';
 
-$nome = $_POST['nome'];
-$sexo = $_POST['sexo'];
-$rg = $_POST['rg'];
-$cpf = $_POST['cpf'];
-$email = $_POST['email'];
-$data_nascimento = $_POST['data_nascimento'];
-$contato = $_POST['contato'];
-$endereço = $_POST['endereço'];
-$foto = $_POST['foto'];
-$estado_civil = $_POST['estado_civil'];
-$nome_conjuge = $_POST['nome_conjuge'];
-$moradia = $_POST['moradia'];
-$nome_pa = $_POST['nome_pa'];
-$rg_pa = $_POST['rg_pa'];
-$data_cadastro = $_POST['data_cadastro'];
-$informacao_adicional = $_POST['informacao_adicional'];
-$status = $_POST['status'];
+$id = $_POST['id_edi'];
+$nome = $_POST['nome_edi'];
+$sexo = $_POST['sexo_edi'];
+$data = $_POST['data_nasc_edi'];
+$dia = (int) substr(($data),0,2);
+$mes = (int) substr(($data),3,5);
+$ano = (int) substr(($data),6,10);
+$data_process = mktime(00,00,00,$mes,$dia,$ano);
+$data_nascimento = date('Y-m-d',$data_process);
+$estado_civil = $_POST['civil_edi'];
+$nome_conjuge = $_POST['conjuge_edi'];
+$rg = $_POST['rg_edi'];
+$cpf = $_POST['cpf_edi'];
+$email = $_POST['email_edi'];
+$telefone = $_POST['telefone_edi'];
+$endereco = $_POST['endereco_edi'];
+$moradia = $_POST['moradia_edi'];
+$nome_pa = $_POST['pa_edi'];
+$rg_pa = $_POST['rg_pa_edi'];
+$informacao_adicional = $_POST['info_edi'];
+$data_cadastro = $_POST['data_cadas_edi'];
+$status = $_POST['status_edi'];
 
 
-$query = "UPDATE pessoas SET nome='$nome', sexo='$sexo', rg='$rg', cpf='$cpf', 
-email='$email', data_nascimento='$data_nascimento', contato='$contato', endereço='$endereço', 
-foto='$foto', estado_civil='$estado_civil', nome_conjuge='$nome_conjuge', moradia='$moradia', 
-nome_pa='$nome_pa', rg_pa='$rg_pa', data_cadastro='$data_cadastro', informação_adicional='$informacao_adicional', 
-status='$status' WHERE idpessoas= $idpessoas";
-
-
-/*$nome = $_POST['nome'];
-$email = $_POST['email'];
-$status = $_POST['status'];
-$idpessoas = $_POST['idpessoas'];
-
-$query = "UPDATE pessoas SET nome='$nome', email='$email', status='$status' WHERE idpessoas= '$idpessoas'";*/
-
-
-
+$query = "UPDATE pessoas SET nome = '$nome', sexo = '$sexo', data_nascimento = '$data_nascimento', estado_civil = '$estado_civil', nome_conjuge = '$nome_conjuge', 
+rg = '$rg', cpf = '$cpf', email = '$email', telefone = '$telefone', endereco = '$endereco', moradia = '$moradia', 
+nome_pa = '$nome_pa', rg_pa = '$rg_pa', informacao_adicional = '$informacao_adicional', data_cadastro = '$data_cadastro', 
+status = '$status' WHERE id = '$id'";
 
 mysqli_query($conexao, $query);
-
 
 header('location:index.php');
 

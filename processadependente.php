@@ -16,7 +16,7 @@ $dificiencia = $_POST['deficiencia'];
 $fralda = $_POST['fralda'];
 
 
-$query = "INSERT INTO dependente values (default, '$foto', '$nome_D', '$data_nascimentoD', '$sexo',
+$query = "INSERT INTO dependentes values (default, '$linha', '$num_cadastro', '$data_nascimentoD', '$sexo',
  '$rg_D', '$grau_parentenco', '$sapato', '$roupa', '$data_nascimentoBB', '$dificiencia', '$fralda')";
 
 mysqli_query($conexao, $query);

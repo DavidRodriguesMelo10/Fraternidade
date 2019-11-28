@@ -33,10 +33,10 @@ USE fraternidade;
 
 CREATE TABLE pessoas (
   idpessoas int(11),
-  foto BLOB,
+  foto varchar(500),
   nome varchar(100) NOT NULL,
   sexo varchar(10) NOT NULL,
-  data_nascimento varchar(20) NOT NULL,
+  data_nascimento varchar(20),
   estado_civil varchar(30) NOT NULL,
   nome_conjuge varchar(255) DEFAULT 'Não tem',
   rg varchar(12) NOT NULL,

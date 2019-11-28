@@ -2,10 +2,15 @@
 
 include 'db.php';
 
-$foto = $_FILES["foto"];
+
 $nome = $_POST['nome'];
-$data_nascimento = $_POST['data_nascimento'];
 $sexo = $_POST['sexo'];
+$data = $_POST['data_nascimento'];
+$dia = (int) substr(($data),0,2);
+$mes = (int) substr(($data),3,5);
+$ano = (int) substr(($data),6,10);
+$data_process = mktime(00,00,00,$mes,$dia,$ano);
+$data_nascimento = date('Y-m-d',$data_process);
 $estado_civil = $_POST['estado_civil'];
 $nome_conjuge = $_POST['nome_conjuge'];
 $rg = $_POST['rg'];
@@ -17,15 +22,12 @@ $moradia = $_POST['moradia'];
 $nome_pa = $_POST['nome_pa'];
 $rg_pa = $_POST['rg_pa'];
 $informacao_adicional = $_POST['informacao_adicional'];
-$data_cadastro = $_POST['data_cadastro'];
+$data_cadastro = date('Y-m-d');
 $status = $_POST['status'];
 
-
-
-$query = "INSERT INTO pessoas values (default, '$foto', '$nome', '$sexo', '$data_nascimento', 
- '$estado_civil', '$nome_conjuge', '$rg', '$cpf', '$email', '$telefone', '$endereco',
- '$moradia', '$nome_pa', '$rg_pa', '$data_cadastro', '$informacao_adicional',
- '$status')";
+$query = "INSERT INTO pessoas values (default, '$nome', '$sexo', '$data_nascimento', '$estado_civil', '$nome_conjuge',
+ '$rg', '$cpf', '$email', '$telefone', '$endereco', '$moradia', '$nome_pa', '$rg_pa', '$informacao_adicional', 
+ '$data_cadastro', '$status')";
 
 mysqli_query($conexao, $query);
 
