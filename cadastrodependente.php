@@ -1,7 +1,11 @@
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery.mask.min.js"></script>
+<script type="text/javascript" src="css/style.css"></script>  
+
 
 <form method="post" action="processadependente.php">
-
     <h1 class='titulo'>Cadastro de dependentes.</h1>
+    <input type="hidden" name="id_dependente" id='id' value="<?php echo $_GET['cadastro'];?>">  
     <div class="form-group">
         <label class="badge badge-secondary">Nome:</label>
         <input type="text" class="form-control" name="nome_D" placeholder="Digite o nome do dependende">
@@ -83,18 +87,4 @@
     </div>
     <input type="submit" class="btn btn-primary" value="Cadastrar Dependente" >
     <br/>
-    <script>
-        function reseta() {
-        var txt;
-        var r = confirm("Deseja cadastrar outro dependente?");
-        if (r == true) {
-            <?php
-            header('location:cadastrodependente.php');
-            ?>
-        } else {
-            header('location:index.php');
-        }
-        document.getElementById("demo").innerHTML = txt;
-        }
-    </script>
 </form>

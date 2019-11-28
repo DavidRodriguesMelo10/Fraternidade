@@ -22,6 +22,9 @@ elseif($pagina == 'editarpessoa'){
     include 'editarpessoa.php';
     include 'consulta_dependentes.php';
 }
+elseif($pagina == 'editardependente'){
+    include 'editardependente.php';
+}
 else{
     include 'pessoas.php';
 }
