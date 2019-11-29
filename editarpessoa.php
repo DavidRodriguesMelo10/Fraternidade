@@ -89,7 +89,7 @@ $data_cadastro = date('d/m/Y',$data_process2);
 </div>
 <div class="form-group">
   <label class="badge badge-secondary">Data do Cadastro:</label>
-  <input type="text" class="form-control" name="data_cadas_edi" id="data_cadas_edi" placeholder="Digite o status" value="<?php echo $data_cadastro?> " readonly>
+  <input type="text" class="form-control" name="data_cadas_edi" id="data_cadas_edi" placeholder="Digite o status" value="<?php echo $data_cadastro?> " >
 </div>
 <div class="form-group">
   <label class="badge badge-secondary">Status:</label>
@@ -110,6 +110,7 @@ $data_cadastro = date('d/m/Y',$data_process2);
 <script type="text/javascript" src="css/style.css"></script>  
 <script>
   $('#data_nasc_edi').mask('00/00/0000');
+  $('#data_cadas_edi').mask('00/00/0000');
   $('#rg_edi').mask('00.000.000-0');
   $('#rg_pa_edi').mask('00.000.000-0');
   $('#cpf_edi').mask('000.000.000-00');

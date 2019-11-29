@@ -22,7 +22,12 @@ $moradia = $_POST['moradia'];
 $nome_pa = $_POST['nome_pa'];
 $rg_pa = $_POST['rg_pa'];
 $informacao_adicional = $_POST['informacao_adicional'];
-$data_cadastro = date('Y-m-d');
+$data2 = $_POST['data_cadastro'];
+$dia2 = (int) substr(($data2),0,2);
+$mes2 = (int) substr(($data2),3,5);
+$ano2 = (int) substr(($data2),6,10);
+$data_process2 = mktime(00,00,00,$mes2,$dia2,$ano2);
+$data_cadastro = date('Y-m-d',$data_process2);
 $status = $_POST['status'];
 
 $query = "INSERT INTO pessoas values (default, '$nome', '$sexo', '$data_nascimento', '$estado_civil', '$nome_conjuge',

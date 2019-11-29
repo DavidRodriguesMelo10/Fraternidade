@@ -64,6 +64,10 @@
     <input type="text" class="form-control" name="informacao_adicional" placeholder="Digite informações adicionais" id="informacao_adicional">
   </div>
   <div class="form-group">
+    <label class="badge badge-secondary">Data do Cadastro:</label>
+    <input type="text" class="form-control" name="data_cadastro" placeholder="" id="data_cadastro">
+  </div>
+  <div class="form-group">
     <label class="badge badge-secondary">Status:</label>
     <input type="text" class="form-control" name="status" placeholder="Digite o status">
   </div>
@@ -75,6 +79,7 @@
 
   <script>
     $('#data_nascimento').mask('00/00/0000');
+    $('#data_cadastro').mask('00/00/0000');
     $('#rg_titular').mask('00.000.000-0');
     $('#rg_pa').mask('00.000.000-0');
     $('#cpf_titular').mask('000.000.000-00');

@@ -22,7 +22,12 @@ $moradia = $_POST['moradia_edi'];
 $nome_pa = $_POST['pa_edi'];
 $rg_pa = $_POST['rg_pa_edi'];
 $informacao_adicional = $_POST['info_edi'];
-$data_cadastro = $_POST['data_cadas_edi'];
+$data2 = $_POST['data_cadas_edi'];
+$dia2 = (int) substr(($data2),0,2);
+$mes2 = (int) substr(($data2),3,5);
+$ano2 = (int) substr(($data2),6,10);
+$data_process2 = mktime(00,00,00,$mes2,$dia2,$ano2);
+$data_cadastro = date('Y-m-d',$data_process2);
 $status = $_POST['status_edi'];
 
 
