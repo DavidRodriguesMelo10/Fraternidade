@@ -12,7 +12,7 @@
     </div>
     <div class="form-group">
         <label class="badge badge-secondary">Data de Nascimento:</label>
-        <input type="text" class="form-control" name="data_nascimentoD" placeholder="Digite a data de nascimento dependente" id="data_dependente">
+        <input type="text" class="form-control" name="data" placeholder="Digite a data de nascimento dependente" id="data_nascimentoD">
     </div>
     <div class="form-group">
         <label class="badge badge-secondary">Sexo:</label>
@@ -20,20 +20,16 @@
     </div>
     <div class="form-group">
         <label class="badge badge-secondary">Rg:</label>
-        <input type="text" class="form-control" name="rg_D" placeholder="Rg dependente">
+        <input type="text" class="form-control" name="rg_D" placeholder="Rg dependente" id='rg_D'>
     </div>
     <div class="form-group">
         <label class="badge badge-secondary">Grau de parentesco:</label>
         <input type="text" class="form-control" name="grau_parentenco" placeholder="Digite o grau de parentesco">
     </div>
     <div class="form-group">
-        <label class="badge badge-secondary">Tamanho do Sapato:</label>
-        <input type="text" class="form-control" name="sapato" placeholder="Digite o numero de calçados">
+        <input type="checkbox" onclick="chamacria()" id="botaocria" name="botaocria">  Sou criança
     </div>
-    <div class="form-group">
-        <label class="badge badge-secondary">Tamanho da Roupa:</label>
-        <input type="text" class="form-control" name="roupa" placeholder="Digite o tamanho da roupa">
-    </div>
+
     <div class="form-group">
         <input type="checkbox" onclick="chamadata()" id="botaogravida" name="botaogravida">  Estou Gravida
     </div>
@@ -45,6 +41,13 @@
     </div>
 
     <script>
+        function chamacria() {
+        if($("#botaocria").is(":checked")){
+            $('#criança').css("display","block");
+        } else {
+            $('#criança').css("display","none");
+        }
+        }
         function chamadata() {
         if($("#botaogravida").is(":checked")){
             $('#gravida').css("display","block");
@@ -67,6 +70,16 @@
         }
         }
     </script>
+    <div style="display:none" id="criança">
+    <div class="form-group">
+        <label class="badge badge-secondary">Tamanho do Sapato:</label>
+        <input type="text" class="form-control" name="sapato" placeholder="Digite o numero de calçados">
+    </div>
+    <div class="form-group">
+        <label class="badge badge-secondary">Tamanho da Roupa:</label>
+        <input type="text" class="form-control" name="roupa" placeholder="Digite o tamanho da roupa">
+    </div>
+    </div>
     <div style="display:none" id="gravida">
     <div class="form-group">
         <label class="badge badge-secondary">Data de Nascimento da Bebe:</label>
@@ -88,3 +101,9 @@
     <input type="submit" class="btn btn-primary" value="Cadastrar Dependente" >
     <br/>
 </form>
+<!--Mascaras dependente-->
+
+<script>
+    $('#data_nascimentoD').mask('00/00/0000');
+    $('#rg_D').mask('00.000.000-0');
+  </script>

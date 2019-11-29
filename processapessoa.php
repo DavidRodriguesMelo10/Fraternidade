@@ -5,7 +5,7 @@ include 'db.php';
 
 $nome = $_POST['nome'];
 $sexo = $_POST['sexo'];
-$data = $_POST['data_nascimento'];
+$data = $_POST['data'];
 $dia = (int) substr(($data),0,2);
 $mes = (int) substr(($data),3,5);
 $ano = (int) substr(($data),6,10);

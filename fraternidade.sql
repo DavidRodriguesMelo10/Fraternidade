@@ -60,13 +60,13 @@ CREATE TABLE dependentes(
   sexo_dependente varchar(255) NOT NULL,
   rg_dependente varchar(12),
   grau_parentenco varchar(255) NOT NULL,
-  num_crianca varchar(255),
-  idade_C varchar(255) NOT NULL,
+  num_crianca varchar(255),//
+  idade_C varchar(255) NOT NULL,//
   tamanho_sapato varchar(255),
-  tamanho_roupa varchar(255),
-  data_nascimentoBB date,
-  dificiencia varchar(255),
-  fralda varchar(50) NOT NULL
+  tamanho_roupa varchar(255),//
+  data_nascimentoBB date,//
+  dificiencia varchar(255),//
+  fralda varchar(50) NOT NULL//
 ) ENGINE=InnoDB DEFAULT CHARSET=latin2;
 
 
